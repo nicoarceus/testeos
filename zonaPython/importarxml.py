@@ -2,8 +2,8 @@ from xml.etree.ElementTree import parse
 import os
 os.system('cls')
 
-estructura_xml  = parse("C:/Users/Interhouse HP/Desktop/zonaTesting/testeos/zonaPython/ejemplo.xml") 
-xml = parse("C:/Users/Interhouse HP/Desktop/zonaTesting/pruebas1.xml")
+estructura_xml  = parse("C:/Users/Interhouse HP/Desktop/zonaTesting/testeos/zonaPython/xmlPruebas/ejemplo.xml") 
+xml = parse("C:/Users/Interhouse HP/Desktop/zonaTesting/testeos/zonaPython/xmlPruebas/pruebas1.xml")
 raizXml=xml.getroot()
 # Obtiene el elemento raíz:
 print(estructura_xml)
@@ -11,7 +11,7 @@ print(xml)
 for item in estructura_xml.iterfind('record'):
     print(item.findtext('first_name'))
 print("***************************")
-for movie in raizXml.iter('Emisor'):
+for movie in raizXml:
     print(movie.attrib)
 import pandas as pd
 first_name = []
