@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+  <record>
+    <id>1</id>
+    <first_name>Adelaida</first_name>
+    <last_name>Denizet</last_name>
+    <email>adenizet0@sbwire.com</email>
+    <gender>Female</gender>
+    <ip_address>218.178.45.101</ip_address>
+  </record>
+  <record>
+    <id>2</id>
+    <first_name>Rubia</first_name>
+    <last_name>Butchart</last_name>
+    <email>rbutchart1@google.ca</email>
+    <gender>Female</gender>
+    <ip_address>2.102.241.8</ip_address>
+  </record>
+  <record>
+    <id>3</id>
+    <first_name>Latia</first_name>
+    <last_name>Wasylkiewicz</last_name>
+    <email>lwasylkiewicz2@comcast.net</email>
+    <gender>Female</gender>
+    <ip_address>89.27.210.100</ip_address>
+  </record>
+</dataset>
