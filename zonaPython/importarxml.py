@@ -3,7 +3,7 @@ import os
 os.system('cls')
 
 estructura_xml  = parse("C:/Users/Interhouse HP/Desktop/zonaTesting/testeos/zonaPython/xmlPruebas/ejemplo.xml") 
-xml = parse("C:/Users/Interhouse HP/Desktop/zonaTesting/testeos/zonaPython/xmlPruebas/pruebas1.xml")
+xml = parse("C:/Users/Interhouse HP/Desktop/zonaTesting/testeos/zonaPython/xmlPruebas/prueba5.xml")
 raizXml=xml.getroot()
 # Obtiene el elemento raíz:
 print(estructura_xml)
