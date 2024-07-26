@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+                            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://esb.bci.cl/productos/servicios/pagos/masivos/ServicioPagosMasivos" xmlns:head="http://esb.bci.cl/common/HeaderRequest" xmlns:v1="http://esb.bci.cl/productos/servicios/pagos/masivos/ServicioPagosMasivos/v1">
+                               <soapenv:Header/>
+                               <soapenv:Body>
+                                  <ser:cargaRequest>
+                                     <head:requestHeader>
+                                        <head:consumer code="?" name="?">
+                                           <head:userID>?</head:userID>
+                                           <head:credentials>
+                                              <head:userCertificate>{token}</head:userCertificate>
+                                           </head:credentials>
+                                        </head:consumer>
+                                        <!--Optional:-->
+                                     </head:requestHeader>
+                                     <v1:BodyCargaRequest>
+                                        <v1:convenio>{datos['convenio']}</v1:convenio>
+                                        <v1:rutEmpresa>
+                                            <v1:rut>{datos['rut_empresa']}</v1:rut>
+                                            <v1:digitoVerificador>{datos['dv_empresa']}</v1:digitoVerificador>
+                                        </v1:rutEmpresa>
+                                        <v1:rutUsuario>
+                                            <v1:rut>{datos['rut_usuario']}</v1:rut>
+                                            <v1:digitoVerificador>{datos['dv_usuario']}</v1:digitoVerificador>
+                                        </v1:rutUsuario>
+                                        <v1:cuentaCargo>{datos['cuenta_cargo']}</v1:cuentaCargo>
+                                        <v1:tipoPago>{datos['tipo_pago']}</v1:tipoPago>
+                                        <v1:fechaPago>{datos['fecha_pago']}</v1:fechaPago>
+                                        <v1:plantilla>{datos['plantilla']}</v1:plantilla>
+                                        <v1:archivo>
+                                           <v1:nombre>{datos['archivo_nombre']}</v1:nombre>
+                                           <v1:cuerpo>{datos['cuerpo']}</v1:cuerpo>
+                                        </v1:archivo>
+                                        <v1:atributos>
+                                            <v1:atributo>
+                                               <v1:clave>codigoCca</v1:clave>
+                                               <v1:valor>{datos['clave_codigoCca']}</v1:valor>
+                                            </v1:atributo>
+                                            <v1:atributo>
+                                               <v1:clave>contenidoNomina</v1:clave>
+                                               <v1:valor>{datos['clave_contenidonomina']}</v1:valor>
+                                            </v1:atributo>
+                                        </v1:atributos>
+                                     </v1:BodyCargaRequest>
+                                  </ser:cargaRequest>
+                               </soapenv:Body>
+                            </soapenv:Envelope>
